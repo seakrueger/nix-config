@@ -18,15 +18,15 @@
       };
     in
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
           modules = [ 
-            ./profiles/default/configuration.nix
-            # inputs.home-manager.nixosModules.default
+            ./profiles/desktop/configuration.nix
+            # inputs.home-manager.nixosModules.desktop
           ];
           specialArgs = {
             inherit inputs;
             systemSettings = let inherit systemSettings; in {
-                                profile = "default";
+                                profile = "desktop";
                              };
           };
         };
