@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./../base.nix
 
       ./../../modules/system/bash.nix
       ./../../modules/system/git.nix
@@ -20,37 +21,12 @@
       ./../../modules/programs/games/games.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = systemSettings.timeZone;
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = systemSettings.locale;
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = systemSettings.locale;
-    LC_IDENTIFICATION = systemSettings.locale;
-    LC_MEASUREMENT = systemSettings.locale;
-    LC_MONETARY = systemSettings.locale;
-    LC_NAME = systemSettings.locale;
-    LC_NUMERIC = systemSettings.locale;
-    LC_PAPER = systemSettings.locale;
-    LC_TELEPHONE = systemSettings.locale;
-    LC_TIME = systemSettings.locale;
-  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -88,32 +64,14 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${userSettings.primaryUser} = {
-    isNormalUser = true;
-    description = "primary";
-    extraGroups = userSettings.primaryGroups;
-    packages = with pkgs; [
-      firefox
-      prismlauncher
-      discord
-      signal-desktop
-      kicad
-    ];
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
+  # User packages for primary user
+  users.users.${userSettings.primaryUser}.packages = with pkgs; [
+    firefox
+    prismlauncher
+    discord
+    signal-desktop
+    kicad
   ];
-
-  environment.variables.EDITOR = "vim";
-  programs.vim.defaultEditor = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -141,13 +99,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
-  # Automatic Upgrades
-  # https://nixos.org/manual/nixos/stable/#sec-upgrading-automatic
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
-
-  # Flakes
-  # https://nixos.wiki/wiki/Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
