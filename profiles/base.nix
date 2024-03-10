@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./../modules/system/bash.nix
       inputs.home-manager.nixosModules.default
     ];
 

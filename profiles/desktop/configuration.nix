@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ./../base.nix
 
-      ./../../modules/system/bash.nix
       ./../../modules/system/languages.nix
 
       ./../../modules/programs/vscode.nix
