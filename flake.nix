@@ -23,6 +23,9 @@
       userSettings = {
         primaryUser = "general";
         primaryGroups = [ "networkmanager" "wheel" ];
+
+        name = "Sean Krueger";
+        email = "skrueger2270@gmail.com";
       };
     in
     {

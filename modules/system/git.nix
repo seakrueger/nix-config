@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, userSettings, ... }:
 
 {
-  environment.systemPackages = [ pkgs.git ];
+  home.packages = [ pkgs.git ];
   programs.git.enable = true;
-  programs.git.config = {
-    init = {
-      defaultBranch = "main";
-    };
+
+  programs.git.userName = userSettings.name;
+  programs.git.userEmail = userSettings.email;
+  programs.git.extraConfig = {
+    init.defaultBranch = "main";
   };
 }

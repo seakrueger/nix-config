@@ -11,7 +11,6 @@
       ./../base.nix
 
       ./../../modules/system/bash.nix
-      ./../../modules/system/git.nix
       ./../../modules/system/languages.nix
       ./../../modules/system/starship.nix
 
