@@ -1,6 +1,11 @@
-{ config, pkgs, systemSettings, userSettings, ... }:
+{ config, pkgs, systemSettings, userSettings, profile, inputs, ... }:
 
 {
+  imports =
+    [
+      inputs.home-manager.nixosModules.default
+    ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -42,6 +47,16 @@
     extraGroups = userSettings.primaryGroups;
   };
 
+  home-manager = {
+    users = {
+      ${userSettings.primaryUser} = import ./${profile}/home.nix;
+    };
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit systemSettings;
+      inherit userSettings;
+    };
+  };
 
   # Automatic Upgrades
   # https://nixos.org/manual/nixos/stable/#sec-upgrading-automatic
