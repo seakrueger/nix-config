@@ -15,6 +15,14 @@
       systemSettings = {
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+
+        timeZone = "America/Chicago";
+        locale = "en_US.UTF-8";
+      };
+
+      userSettings = {
+        primaryUser = "general";
+        primaryGroups = [ "networkmanager" "wheel" ];
       };
     in
     {
@@ -25,9 +33,9 @@
           ];
           specialArgs = {
             inherit inputs;
-            systemSettings = let inherit systemSettings; in {
-                                profile = "desktop";
-                             };
+            inherit userSettings;
+            inherit systemSettings;
+            profile = "desktop";
           };
         };
 

@@ -1,10 +1,10 @@
-{ config, pkgs, systemSettings, ... }:
+{ config, pkgs, profile, ... }:
 
 {
   programs.bash.shellAliases = {
     ll = "ls -la";
 
-    nixos-edit = "${config.environment.variables.EDITOR} ${config.users.users.general.home}/.nix/profiles/${systemSettings.profile}";
+    nixos-edit = "${config.environment.variables.EDITOR} ${config.users.users.general.home}/.nix/profiles/${profile}";
   };
 
   programs.bash.promptInit = ''
