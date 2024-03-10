@@ -9,6 +9,7 @@
   imports =
     [
       ./../../modules/system/git.nix
+      ./../../modules/system/starship.nix
     ];
 
   # This value determines the Home Manager release that your configuration is

@@ -12,7 +12,6 @@
 
       ./../../modules/system/bash.nix
       ./../../modules/system/languages.nix
-      ./../../modules/system/starship.nix
 
       ./../../modules/programs/vscode.nix
       ./../../modules/programs/kitty.nix
