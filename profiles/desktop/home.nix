@@ -10,6 +10,7 @@
     [
       ./../../modules/system/git.nix
       ./../../modules/system/starship.nix
+      ./../../modules/programs/kitty.nix
     ];
 
   # This value determines the Home Manager release that your configuration is

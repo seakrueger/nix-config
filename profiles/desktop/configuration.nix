@@ -13,7 +13,6 @@
       ./../../modules/system/languages.nix
 
       ./../../modules/programs/vscode.nix
-      ./../../modules/programs/kitty.nix
 
       ./../../modules/programs/games/games.nix
     ];
