@@ -33,13 +33,8 @@
 
   # Baseline packages for all machines
   environment.systemPackages = with pkgs; [
-    vim
     wget
   ];
-
-  # Set vim as the default editor
-  environment.variables.EDITOR = "vim";
-  programs.vim.defaultEditor = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.primaryUser} = {

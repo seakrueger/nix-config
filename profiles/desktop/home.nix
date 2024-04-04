@@ -9,6 +9,7 @@
   imports =
     [
       ./../../modules/system/git.nix
+      ./../../modules/system/vim.nix
       ./../../modules/system/starship.nix
       ./../../modules/programs/kitty.nix
     ];
