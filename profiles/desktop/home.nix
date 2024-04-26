@@ -8,6 +8,7 @@
 
   imports =
     [
+      ./../../modules/system/bash.nix
       ./../../modules/system/git.nix
       ./../../modules/system/vim.nix
       ./../../modules/system/starship.nix

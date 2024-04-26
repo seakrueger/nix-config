@@ -2,10 +2,6 @@
 
 {
   programs.vim.enable = true;
-
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
   programs.vim.defaultEditor = true;
 
   programs.vim.settings = {
