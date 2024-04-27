@@ -12,8 +12,6 @@
 
       ./../../modules/system/languages.nix
 
-      ./../../modules/programs/vscode.nix
-
       ./../../modules/programs/games/games.nix
     ];
 

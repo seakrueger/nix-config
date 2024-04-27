@@ -12,7 +12,9 @@
       ./../../modules/system/git.nix
       ./../../modules/system/vim.nix
       ./../../modules/system/starship.nix
+
       ./../../modules/programs/kitty.nix
+      ./../../modules/programs/vscode.nix
     ];
 
   # This value determines the Home Manager release that your configuration is
