@@ -21,13 +21,15 @@
       ./../../modules/programs/games/games.nix
     ];
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # Enable networking
+  networking.networkmanager.enable = true;
+  networking.networkmanager.logLevel = "INFO";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.networkmanager.wifi.backend = "iwd";
+  networking.networkmanager.wifi.powersave = false;
 
+  networking.hostName = "desktop-nixos"; # Define your hostname.
+  
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
