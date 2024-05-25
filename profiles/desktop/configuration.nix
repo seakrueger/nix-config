@@ -66,6 +66,9 @@
     discord
     signal-desktop
     kicad
+
+    jetbrains.rust-rover
+    zed-editor
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
