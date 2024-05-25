@@ -1,4 +1,4 @@
-{ config, pkgs, profile, ... }:
+{ config, pkgs, lib, profile, userSettings, ... }:
 
 {
   programs.bash.enable = true;
@@ -10,7 +10,9 @@
     ll = "ls -la";
 
     nixos-edit = "${config.home.sessionVariables.EDITOR} ${config.home.homeDirectory}/.nix/profiles/${profile}";
-    nixos-update = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.nix#${profile}";
+    nixos-update =
+      (if userSettings.firefox.manage.settings then "rm ${config.home.homeDirectory}/.mozilla/firefox/${profile}/search.json.mozlz4; " else "") +
+      "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.nix#${profile}";
     nixos-test = "sudo nixos-rebuild test --flake ${config.home.homeDirectory}/.nix#${profile} --option eval-cache false";
   };
 

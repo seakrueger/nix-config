@@ -15,6 +15,7 @@
 
       ./../../modules/programs/kitty.nix
       ./../../modules/programs/vscode.nix
+      ./../../modules/programs/firefox.nix
     ];
 
   # This value determines the Home Manager release that your configuration is

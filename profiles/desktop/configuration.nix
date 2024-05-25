@@ -62,7 +62,6 @@
 
   # User packages for primary user
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
-    firefox
     prismlauncher
     discord
     signal-desktop
