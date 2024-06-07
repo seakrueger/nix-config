@@ -9,7 +9,7 @@
     format = lib.concatStrings [
       "[┌───> ](bold pink)$git_branch $git_status"
       "\n"
-      "[│](bold pink)$directory"
+      "[│](bold pink)$directory$nix_shell"
       "\n"
       "[\\\$](purple) "
     ];
@@ -21,6 +21,11 @@
       blue = "#8be9fd";
       purple = "#bd93f9";
       pink = "#ff79c6";
+    };
+
+    nix_shell = {
+      symbol = "❄️";
+      format = "[$symbol](blue)";
     };
 
     package.disabled = true;
