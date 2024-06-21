@@ -9,11 +9,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1717646600,
-        "narHash": "sha256-yHNeUEOU8/n+ULrsokW5aCLDWg/mEVbPCOyhTIorZns=",
+        "lastModified": 1718942615,
+        "narHash": "sha256-V2l7QSaOBOFjn8AEBj+f2V6aPd5tbgAvX34A4I5PK6I=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "bdbbd8c2cb03b23b586fea14a8a680b218ab363c",
+        "rev": "56ed74bf4f492a38ec7c0a7748f5787d93b900a9",
         "type": "gitlab"
       },
       "original": {
@@ -45,11 +45,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1717525419,
-        "narHash": "sha256-5z2422pzWnPXHgq2ms8lcCfttM0dz+hg+x1pCcNkAws=",
+        "lastModified": 1718788307,
+        "narHash": "sha256-SqiOz0sljM0GjyQEVinPXQxaGcbOXw5OgpCWGPgh/vo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a7117efb3725e6197dd95424136f79147aa35e5b",
+        "rev": "d7830d05421d0ced83a0f007900898bdcaf2a2ca",
         "type": "github"
       },
       "original": {
@@ -58,13 +58,29 @@
         "type": "github"
       }
     },
+    "nixos-hardware": {
+      "locked": {
+        "lastModified": 1718987887,
+        "narHash": "sha256-zVoDb0GkhdfrRtJbJm3QIwFAyZEv9ZBo23vfPa5cfjk=",
+        "owner": "NixOS",
+        "repo": "nixos-hardware",
+        "rev": "cc634b69c8312c4e88469d3c7e8fb5ecc72e7dc6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1717602782,
-        "narHash": "sha256-pL9jeus5QpX5R+9rsp3hhZ+uplVHscNJh8n8VpqscM0=",
+        "lastModified": 1718895438,
+        "narHash": "sha256-k3JqJrkdoYwE3fHE6xGDY676AYmyh4U2Zw+0Bwe5DLU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e8057b67ebf307f01bdcc8fba94d94f75039d1f6",
+        "rev": "d603719ec6e294f034936c0d0dc06f689d91b6c3",
         "type": "github"
       },
       "original": {
@@ -78,6 +94,7 @@
       "inputs": {
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
+        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs"
       }
     }
