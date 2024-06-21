@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./../base.nix
 
-      ./../../modules/nixpkgs/games/games.nix
+      ./../../modules/nixpkgs/game/games.nix
       ./../../modules/nixpkgs/app/communication.nix
     ];
 
