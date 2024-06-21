@@ -27,6 +27,7 @@
 
         timeZone = "America/Chicago";
         locale = "en_US.UTF-8";
+        layout = "us";
       };
 
       userSettings = {

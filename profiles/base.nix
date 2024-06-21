@@ -22,6 +22,12 @@
     LC_TIME = systemSettings.locale;
   };
 
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = systemSettings.layout;
+    variant = "";
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
