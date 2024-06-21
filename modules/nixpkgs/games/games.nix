@@ -5,6 +5,10 @@
     [
       ./steam.nix
       ./lutris.nix
-      ./xonotic.nix
     ]; 
+
+  environment.systemPackages = with pkgs; [
+    prismlauncher
+    xonotic
+  ];
 }

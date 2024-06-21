@@ -9,6 +9,8 @@
     [
       ./hardware-configuration.nix
       ./../base.nix
+
+      ./../../modules/nixpkgs/app/communication.nix
     ];
 
   services.fwupd = {
@@ -67,8 +69,6 @@
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
     thunderbird
     libreoffice
-    signal-desktop
-    discord
   ];
 
   # This value determines the NixOS release from which the default

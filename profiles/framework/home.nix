@@ -8,13 +8,13 @@
 
   imports =
     [
-      ./../../modules/system/bash.nix
-      ./../../modules/system/git.nix
-      ./../../modules/system/vim.nix
-      ./../../modules/system/starship.nix
+      ./../../modules/home-manager/shell/bash.nix
+      ./../../modules/home-manager/shell/git.nix
+      ./../../modules/home-manager/shell/vim.nix
+      ./../../modules/home-manager/shell/starship.nix
 
-      ./../../modules/programs/kitty.nix
-      ./../../modules/programs/firefox.nix
+      ./../../modules/home-manager/app/kitty.nix
+      ./../../modules/home-manager/app/firefox.nix
     ];
 
 

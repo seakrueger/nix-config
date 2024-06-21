@@ -10,9 +10,8 @@
       ./hardware-configuration.nix
       ./../base.nix
 
-      ./../../modules/system/languages.nix
-
-      ./../../modules/programs/games/games.nix
+      ./../../modules/nixpkgs/games/games.nix
+      ./../../modules/nixpkgs/app/communication.nix
     ];
 
   # Enable networking
@@ -56,9 +55,6 @@
 
   # User packages for primary user
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
-    prismlauncher
-    discord
-    signal-desktop
     kicad
 
     jetbrains.rust-rover
