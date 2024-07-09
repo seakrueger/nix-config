@@ -74,7 +74,9 @@
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
     thunderbird
     libreoffice
+
     vlc
+    ffmpeg
   ];
 
   # This value determines the NixOS release from which the default
