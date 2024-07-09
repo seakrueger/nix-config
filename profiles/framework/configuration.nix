@@ -41,6 +41,11 @@
     wayland.enable = true;
   };
   services.desktopManager.plasma6.enable = true;
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    konsole
+    kate
+    elisa
+  ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -69,6 +74,7 @@
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
     thunderbird
     libreoffice
+    vlc
   ];
 
   # This value determines the NixOS release from which the default
