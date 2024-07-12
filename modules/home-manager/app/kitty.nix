@@ -17,4 +17,9 @@
 
     confirm_os_window_close 0
   '';
+
+
+  programs.bash.shellAliases = {
+    icat = "kitten icat";
+  };
 }
