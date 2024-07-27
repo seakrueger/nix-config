@@ -74,7 +74,9 @@
   users.users.${userSettings.primaryUser}.packages = with pkgs; [
     thunderbird
     libreoffice
+
     darktable
+    kicad
 
     vlc
     ffmpeg
