@@ -76,6 +76,7 @@
     libreoffice
 
     darktable
+    davinci-resolve
     kicad
 
     vlc
