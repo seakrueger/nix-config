@@ -51,7 +51,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -77,10 +76,12 @@
 
     darktable
     davinci-resolve
+    gimp
     kicad
 
     vlc
     ffmpeg
+    exiftool
   ];
 
   # This value determines the NixOS release from which the default
