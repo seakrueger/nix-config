@@ -11,6 +11,7 @@
       ./../base.nix
 
       ./../../modules/nixpkgs/app/communication.nix
+      ./../../modules/nixpkgs/game/steam.nix
     ];
 
   services.fwupd = {
