@@ -7,8 +7,8 @@
   programs.kitty.shellIntegration.mode = "no-rc no-cursor";
 
   programs.kitty.theme = "Solarized Darcula";
-  programs.kitty.keybindings = { };
 
+  programs.kitty.keybindings = { };
   programs.kitty.settings = {
     enable_audio_bell = false;  
   };

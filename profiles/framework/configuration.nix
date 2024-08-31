@@ -12,6 +12,7 @@
 
       ./../../modules/nixpkgs/app/communication.nix
       ./../../modules/nixpkgs/game/steam.nix
+      ./../../modules/nixpkgs/shell/lunarvim.nix
     ];
 
   services.fwupd = {
@@ -84,6 +85,8 @@
     ffmpeg
     exiftool
   ];
+
+  fonts.fontDir.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
