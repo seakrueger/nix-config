@@ -47,6 +47,7 @@
     konsole
     kate
     elisa
+    krdp
   ];
 
   # Enable CUPS to print documents.
@@ -80,10 +81,14 @@
     davinci-resolve
     gimp
     kicad
-
     vlc
+
     ffmpeg
     exiftool
+    gcc
+
+    samba
+    cifs-utils
   ];
 
   fonts.fontDir.enable = true;
