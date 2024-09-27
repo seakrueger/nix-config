@@ -6,7 +6,7 @@
   programs.kitty.shellIntegration.enableBashIntegration = true;
   programs.kitty.shellIntegration.mode = "no-rc no-cursor";
 
-  programs.kitty.theme = "Solarized Darcula";
+  programs.kitty.themeFile = "Solarized_Darcula";
 
   programs.kitty.keybindings = { };
   programs.kitty.settings = {
